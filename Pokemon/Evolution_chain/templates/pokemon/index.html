@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon</title>
+</head>
+<body>
+    <h1>{{p_data.name}}</h1>
+    <h3>id : {{p_data.idApi}}</h3>
+    <h3>height : {{p_data.height}}</h3>
+    <h3>weight : {{p_data.weight}}</h3>
+    <h2>stats</h2>
+    
+    <h3>speed  : {{p_data.speed}}</h3>
+    <h3>special defense : {{p_data.specialDefense}}</h3>
+    <h3>special attack  : {{p_data.specialAttack}}</h3>
+    <h3>defense : {{p_data.defense}}</h3>
+    <h3>attack  : {{p_data.attack}}</h3>
+    <h2>evolution </h2>
+    <h3>prevolution : {{p_data.prevolution}}</h3>
+    <h3>evolution : {{p_data.evolution}}</h3>
+    
+    
+    
+    <h2>prevolution details</h2>
+    {% for i in prevolution %}
+        <h3>{{i.name}}</h3>
+        <h3>{{i.idApi}}</h3>
+    {%endfor%}
+    
+    <h2>evolution details</h2>
+    {% for i in evolution %}
+        <h3>{{i.name}}</h3>
+        <h3>{{i.idApi}}</h3>
+    {%endfor%}
+
+</body>
+</html>
