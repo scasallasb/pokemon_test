@@ -20,8 +20,8 @@ import requests
 from .models import pokemon
 
 
-def chain(request):
-    response= requests.get('https://pokeapi.co/api/v2/evolution-chain/26/')
+def chain(request, id ):
+    response= requests.get('https://pokeapi.co/api/v2/evolution-chain/'+ str(id) +"/")
     data = response.json()
 
     #Get pokemon name
@@ -93,12 +93,12 @@ def save_pokemon(name,  Prevolution= None, Evolution= None):
         Pokemon.save()
     if Evolution is not None:        
         Pokemon= pokemon.objects.get(name= name)
-        print (Pokemon.evolution)
+        
         if Pokemon.evolution != Evolution and Pokemon.evolution!=None: 
             Pokemon.evolution= str(Pokemon.evolution)+','+str(Evolution)
         else:        
             Pokemon.evolution= Evolution
-        print (Pokemon.evolution)
+        
         Pokemon.save()
         
     Pokemon.save()

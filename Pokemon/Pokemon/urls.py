@@ -21,6 +21,6 @@ from Evolution_chain import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('chain/', views.chain, name='chain'),
-    path('pokemon/<str:name>', views.list_pokemon_name, name= "pokemon")
+    path('chain/<int:id>/', views.chain, name='chain'),
+    path('pokemon/<str:name>/', views.list_pokemon_name, name= "pokemon")
 ]
