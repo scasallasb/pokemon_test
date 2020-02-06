@@ -21,6 +21,8 @@ from .models import pokemon
 
 
 def chain(request, id ):
+    """fetch and store pokemon from pokeapi 
+    """
     response= requests.get('https://pokeapi.co/api/v2/evolution-chain/'+ str(id) +"/")
     data = response.json()
 
@@ -65,6 +67,8 @@ def chain(request, id ):
     
 
 def save_pokemon(name,  Prevolution= None, Evolution= None):
+   """save pokemon data
+   """ 
     
     #found Pokemon from name
     response= requests.get('https://pokeapi.co/api/v2/pokemon/' + name + '/' )
@@ -108,6 +112,8 @@ def save_pokemon(name,  Prevolution= None, Evolution= None):
 
 
 def list_pokemon_name(request, name):
+    """found pokemon from name and show data
+    """
     
     
     try:

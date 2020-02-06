@@ -4,6 +4,8 @@ from __future__ import unicode_literals
 from django.db import models
 
 class  pokemon(models.Model):
+    """Pokemon model
+    """
     
     #Pokemon features
     #id = models.AutoField(primary_key=True)
