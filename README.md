@@ -11,12 +11,12 @@ You have to run server with
 
 After you fetch and store Pokemon from "id" in browser with:
 
-`http://localhost:8000/chain/{id}`
+`http://localhost:8000/chain/{id}/`
 
 
 By last, you found pokemon from "name" with web service:
 
-`http://localhost:8000/pokemon/{name}`
+`http://localhost:8000/pokemon/{name}/`
 
 
 
